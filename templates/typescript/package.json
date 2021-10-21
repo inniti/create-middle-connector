@@ -1,0 +1,34 @@
+{
+	"name": "",
+	"version": "0.1.0",
+	"description": "My @inniti/middle connector",
+	"main": "dist/index.js",
+	"keywords": [
+		"middle",
+		"inniti-middle"
+	],
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev:build": "npm run build -- --watch",
+		"dev:serve": "nodemon dev-server.js",
+		"dev": "NODE_ENV=development npm-run-all -p dev:build dev:serve",
+		"build": "node build.js",
+		"postinstall": "node postinstall.js",
+		"start": "node dev.js"
+	},
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"@inniti/middle": "latest",
+		"graphql-tag": "^2.12.5"
+	},
+	"devDependencies": {
+		"dotenv": "^10.0.0",
+		"@types/node": "^16.11.1",
+		"esbuild": "^0.13.8",
+		"nodemon": "^2.0.14",
+		"npm-run-all": "^4.1.5"
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name": "@inniti/create-middle-connector",
+	"description": "Generator for @inniti/middle connectors",
+	"author": "inniti",
+	"version": "1.0.0",
+	"scripts": {
+		"prepare": "husky install",
+		"release": "standard-version"
+	},
+	"keywords": [
+		"middleware",
+		"graphql",
+		"eCommerce",
+		"api",
+		"generator",
+		"middle"
+	],
+	"bin": "./index.js",
+	"license": "MIT",
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"inquirer": "^8.2.0"
+	},
+	"devDependencies": {
+		"standard-version": "^9.3.2",
+		"husky": "^6.0.0"
+	}
+}
