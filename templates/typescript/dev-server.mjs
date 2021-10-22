@@ -1,5 +1,5 @@
-const { createServer } = require('@inniti/middle');
-const Connector = require('./dist/index.js').default;
+import { createServer } from '@inniti/middle';
+import Connector from './dist/index.mjs';
 
 const server = createServer({
     connectors: [new Connector()],

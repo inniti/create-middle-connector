@@ -2,33 +2,39 @@
 	"name": "",
 	"version": "0.1.0",
 	"description": "My @inniti/middle connector",
-	"main": "dist/index.js",
 	"keywords": [
 		"middle",
 		"inniti-middle"
 	],
+	"license": "MIT",
+	"author": "",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"dev:build": "npm run build -- --watch",
-		"dev:serve": "nodemon dev-server.js",
-		"dev": "NODE_ENV=development npm-run-all -p dev:build dev:serve",
-		"build": "node build.js",
-		"postinstall": "node postinstall.js",
-		"start": "node dev.js"
+		"dev:build": "siroc build --watch",
+		"dev:serve": "nodemon dev-server.mjs",
+		"dev": "npm run build && run-p dev:serve dev:build",
+		"build": "siroc build",
+		"postinstall": "node postinstall.js"
 	},
-	"author": "",
-	"license": "MIT",
 	"dependencies": {
 		"@inniti/middle": "latest",
 		"graphql-tag": "^2.12.5"
 	},
 	"devDependencies": {
-		"dotenv": "^10.0.0",
 		"@types/node": "^16.11.1",
-		"esbuild": "^0.13.8",
+		"dotenv": "^10.0.0",
 		"nodemon": "^2.0.14",
-		"npm-run-all": "^4.1.5"
+		"npm-run-all": "^4.1.5",
+		"siroc": "^0.16.0"
 	}
 }
