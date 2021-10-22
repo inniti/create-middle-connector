@@ -2,7 +2,7 @@
 	"name": "@inniti/create-middle-connector",
 	"description": "Generator for @inniti/middle connectors",
 	"author": "inniti",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"homepage": "https://github.com/inniti/create-middle-connector",
 	"scripts": {
 		"prepare": "husky install",
