@@ -1,5 +1,8 @@
+import { config } from 'dotenv';
 import { createServer } from '@inniti/middle';
 import Connector from './dist/index.mjs';
+
+config();
 
 const server = createServer({
     connectors: [new Connector()],
